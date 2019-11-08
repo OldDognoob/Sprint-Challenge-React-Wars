@@ -1,28 +1,33 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import axios from "axios";
 import PeopleCard from "./PeopleCard";
+
 
 import {StyledPeopleContainer} from "./StyledCard";
 
 const PeopleContainer = () => {
-   const {people} = props;
+
+    const[people, setPeople] = useState ([]);
+
+   useEffect(() => {
+    axios
+      .get('https://swapi.co/api/people/')
+      .then(response => {
+          console.log(response.data)
+          setPeople(response.data.results);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
 
    return (
        <StyledPeopleContainer>
            <h1>People</h1>
-           {people.map(people => {
-               return (
-                   <PeopleCard
-                   className="Luke Skywalker"
-                   key = {people.name}
-                   name ={people.name}
-                   mass ={people.mass}
-                   height ={people.height}
-                   hairColor = {people.hair_color}
-                   birthyear ={people.birth_year}
-                   gender = {people.gender}
-                   />
-               );
-           })}
+
+           {people.map((people, index) => <PeopleCard key={index} name={people.name} birth_year={people.Birth_year} gender={people.gender}/>)}
+           
        </StyledPeopleContainer>
    );
 

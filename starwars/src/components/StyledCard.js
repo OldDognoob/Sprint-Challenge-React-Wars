@@ -1,8 +1,7 @@
-import React from "react";
 
 import styled from "styled-components";
 
-const StyledPeopleContainer = styled.div`
+export const StyledPeopleContainer = styled.div`
   background-color: rgba(133, 133, 133, 0.3);
   display: flex;
   justify-content: space-evenly;
@@ -34,4 +33,4 @@ const PeopleCard = styled.div`
     font-family: "Orbitron", sans-serif;
   }
   `;
-  export  {StyledPeopleContainer, PeopleCard, h1, p};
+  

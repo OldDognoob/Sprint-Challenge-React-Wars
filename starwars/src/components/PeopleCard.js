@@ -1,19 +1,15 @@
-import Reatc from "react";
-
-import styled from "styled-components";
+import React from "react";
+import {StyledPeopleContainer} from './StyledCard'
 
  const PeopleCard =(props) => {
-     const {name, mass, height, hair_color,birth_year,gender} = props;
+     const {name, birth_year ,gender} = props;
 
      return (
-        <StyledCard>
+        <StyledPeopleContainer>
           <h1>Name:{name}</h1>
-          <p>Mass:{mass}</p>
-          <p>Height:{height}</p>
-          <p>Hair Color:{hair_color}</p>
-          <p>Birth Year:{birth_year}</p>
+          <p>birth_year:{birth_year}</p>
           <p>Gender:{gender}</p>
-        </StyledCard>
+        </StyledPeopleContainer>
       );
     };
 
