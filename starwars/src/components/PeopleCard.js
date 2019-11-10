@@ -14,5 +14,3 @@ import {StyledPeopleContainer} from './StyledCard'
     };
 
 export default PeopleCard;
-
-

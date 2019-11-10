@@ -30,7 +30,7 @@ React is an efficient and flexible Javascript Library for building UI. It let yo
 
 - One of the concept of React is the way of interacting at the virtual DOM than at the actual DOM.In React every for every object in DOM there is an objetc in Virtual DOM. To make changes in the DOM for an object is slowing the process and make it difficult to manipulate. But when you making changes and you manipulating the Virtual DOM then all the changes are passing through the actual one makes it more easy, great in performance.
 -If a new Virtual DOM object is rendered React knows exactly wich compononet to update and the changes can be seen to actual DOM also.
--It is simple, expressing the appearance of your application and React takew care of the user interface updates.
+-It is simple, expressing the appearance of your application and React take care of the user interface updates.
 Examples are Twitter, facebook.
 
 - [ ] What does it mean to _think_ in react?

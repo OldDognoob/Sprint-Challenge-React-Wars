@@ -11,9 +11,6 @@ export const StyledPeopleContainer = styled.div`
   align-items: center;
   margin-bottom: 3rem;
 
-
-
-
   p {
     width: 100%;
     font-family: "Orbitron", sans-serif;

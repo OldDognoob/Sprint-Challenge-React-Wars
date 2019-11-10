@@ -13,7 +13,7 @@ const PeopleContainer = () => {
     axios
       .get('https://swapi.co/api/people/')
       .then(response => {
-          console.log(response.data)
+          console.log(response.data.results)
           setPeople(response.data.results);
       })
       .catch(error => {
