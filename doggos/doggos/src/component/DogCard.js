@@ -1,14 +1,15 @@
 import React from "react";
-import {StyledDogContainer} from './StyledDogCard'
+import DogContainer from './DogContainer';
+
 
 const DogCard = (props) => {
     const {name, breed} = props;
 
     return (
-        <StyledDogContainer>
+        <DogContainer>
             <h1>Name:{name}</h1>
             <p>breed:{breed}</p>
-        </StyledDogContainer>
+        </DogContainer>
     );
 };
 
