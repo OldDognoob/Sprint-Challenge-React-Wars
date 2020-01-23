@@ -1,33 +1,50 @@
 
 import styled from "styled-components";
 
-export const StyledPeopleContainer = styled.div`
-  background-color: rgba(133, 133, 133, 0.3);
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 3rem;
-  align-items: center;
-  margin-bottom: 3rem;
 
-  p {
-    width: 100%;
-    font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-  }
+const StyledCard = styled.div`
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: #D3CBB8;
+  margin: 0 auto;
+  margin-top: 120px;
+  max-width: 1000px;
+  overflow: hidden;
+  transition: ease-in-out 0.2s;
+  border: 3px solid #443E3E;
+
+
+    filter: blur(3px);
+    &:hover {
+        filter: blur(0px);
+    }
+
+    
+    &:hover {
+        transform: scale(1.03);
+        transition: ease-in-out 0.13s;
+        box-shadow: 2px 5px 7px #323330;
+    }
+    @media (max-width: 500px) {
+        width: 85%;
+    }
+    h2 {
+        color: #323330;
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+    p {
+        font-size: 1.2rem;
+        color: #323330;
+    }
+    span {
+        font-weight: bold;
+    }
 `;
 
-const PeopleCard = styled.div`
-  width: 40%;
-  background-color: white;
-  margin-bottom: 2rem;
-  text-align: left;
-  padding: 2rem 0 2rem 2rem;
-  box-shadow: 5px 5px grey;
-  h1 {
-    font-family: "Orbitron", sans-serif;
-  }
-  `;
-  
+export default StyledCard;
+
+

@@ -1,16 +1,23 @@
-import React from "react";
-import {StyledPeopleContainer} from './StyledCard'
+import React from 'react';
 
- const PeopleCard =(props) => {
-     const {name, birth_year ,gender} = props;
+import StyledCard from './StyledCard';
 
-     return (
-        <StyledPeopleContainer>
-          <h1>Name:{name}</h1>
-          <p>birth_year:{birth_year}</p>
-          <p>Gender:{gender}</p>
-        </StyledPeopleContainer>
-      );
-    };
+const Card = (props) => {
+  return (
+    <div className="Card">
+        <StyledCard>
+            <h1> {props.person.name}</h1>
+            <h2> Birth Year: {props.person.birth_year}</h2>
+            <h2> Home: {props.person.homeworld}</h2>
+            <h2> Height: {props.person.height}</h2>
+            <h2> Mass: {props.person.mass}</h2>
 
-export default PeopleCard;
+        </StyledCard>
+    </div>
+  );
+}
+
+
+
+
+export default Card;
