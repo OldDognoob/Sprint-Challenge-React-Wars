@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './App.css';
-import axios from "axios";
-import styled from "styled-components";
+import CardContainer from './components/CardContainer'
 
-import PeopleContainer from "./components/PeopleContainer";
-import PeopleCard from "./components/PeopleCard";
+
+
 
 
 
@@ -23,13 +22,12 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <PeopleContainer>
-        <PeopleCard>
-        </PeopleCard>
-      </PeopleContainer>
+      <CardContainer />
     </div>
   );
 }
 
-
 export default App;
+
+
+
