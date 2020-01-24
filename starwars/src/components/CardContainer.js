@@ -7,17 +7,25 @@ const CardContainer =() =>{
     // we create a slice of state called people
     // sending the initial value to an empty array
     const[people, setPeople]=useState([]);
+    const[next, setNext]=useState('');
+    const[previous, setPrevious]=useState('');
+
+    const getPeople =(url)=>{
+        axios.get(url)
+        .then(response =>{
+            console.log(response.data);
+            setPeople(response.data.results);
+            setNext(response.data.next);
+            setPrevious(response.data.previous);
+        })
+       .catch(error=>{
+           console.log('No response from the server', error);
+       })
+    }
 
     //we create a useEffect takes 3 arguments
     useEffect(()=>{
-    axios.get("https://swapi.co/api/people")
-     .then(response =>{
-         console.log(response);
-         setPeople(response.data.results);
-     })
-    .catch(error=>{
-        console.log('No response from the server', error);
-    })
+     getPeople("https://swapi.co/api/people")   
     
     },[])
 
@@ -30,6 +38,10 @@ const CardContainer =() =>{
             )
             })
         }
+        
+        {previous && <button onClick={()=>getPeople(previous)}>Previous</button>}
+        {next && <button onClick={()=>getPeople(next)}>Next</button>}
+
         </div>
       );
 }
