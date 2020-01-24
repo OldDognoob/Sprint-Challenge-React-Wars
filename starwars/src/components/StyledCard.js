@@ -1,33 +1,76 @@
 
 import styled from "styled-components";
 
-export const StyledPeopleContainer = styled.div`
-  background-color: rgba(133, 133, 133, 0.3);
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 3rem;
+const StyledCard = styled.div`
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
-  margin-bottom: 3rem;
+  background: linear-gradient(to right,#3A1C71,#D76D77,#FFAF7B);
+  margin: 0 auto;
+  margin-top: 120px;
+  max-width: 1000px;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+  border: 3px solid #1CB5E0;
 
-  p {
-    width: 100%;
-    font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-  }
+  
+    filter: blur(3px);
+    &:hover {
+        filter: blur(0px);
+    }
+
+    
+    &:hover {
+        transform: scale(1.03);
+        transition: ease-in-out 0.13s;
+        text-shadow: 0.2em 0.2em 0.2em #544a7d;
+        opacity:1;
+    }
+
+    &:hover.styledCard{
+      transform:rotateY(180deg);
+    }
+
+    @media (max-width: 500px) {
+        width: 85%;
+    }
+
+    h2 {
+        color: #a2ab58;
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+
+    h1{
+       color: #f4791f;
+       font-size: 2rem;
+      
+    }
+
+    h3 {
+      color: ${props => props.inputColor || "#19547b"};
+      text-decoration: underline ${props => props.inputColor || "#64f38c"};
+      font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+        color: ${props => props.primary ? "#32330": "#d3cbb8"};
+           
+    }
+
+    span {
+        font-weight: bold;
+    }
 `;
 
-const PeopleCard = styled.div`
-  width: 40%;
-  background-color: white;
-  margin-bottom: 2rem;
-  text-align: left;
-  padding: 2rem 0 2rem 2rem;
-  box-shadow: 5px 5px grey;
-  h1 {
-    font-family: "Orbitron", sans-serif;
-  }
-  `;
-  
+//  const Title=styled.H1`
+   
+ 
+//  `;
+
+export default StyledCard;
+
+

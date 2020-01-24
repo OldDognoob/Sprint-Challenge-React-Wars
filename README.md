@@ -26,10 +26,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-React is an efficient and flexible Javascript Library for building UI. It let you compose complex UI from small and isolated pieces of code called components. We use components to tell React what we want to see in our screen, then React when our data changes will effeciently update and rerender our components.
+React is an efficient and flexible Javascript Library for building UI. It let you compose complex UI from small and isolated pieces of code called components. We use components to tell React what we want to see in our screen, then React when our data changes will efficiently update and rerender our components.
 
-- One of the concept of React is the way of interacting at the virtual DOM than at the actual DOM.In React every for every object in DOM there is an objetc in Virtual DOM. To make changes in the DOM for an object is slowing the process and make it difficult to manipulate. But when you making changes and you manipulating the Virtual DOM then all the changes are passing through the actual one makes it more easy, great in performance.
--If a new Virtual DOM object is rendered React knows exactly wich compononet to update and the changes can be seen to actual DOM also.
+- One of the concept of React is the way of interacting at the virtual DOM than at the actual DOM.In React every for every object in DOM there is an object in Virtual DOM. To make changes in the DOM for an object is slowing the process and make it difficult to manipulate. But when you making changes and you manipulating the Virtual DOM then all the changes are passing through the actual one makes it more easy, great in performance.
+-If a new Virtual DOM object is rendered React knows exactly which component to update and the changes can be seen to actual DOM also.
 -It is simple, expressing the appearance of your application and React take care of the user interface updates.
 Examples are Twitter, facebook.
 
@@ -43,7 +43,7 @@ Examples are Twitter, facebook.
 - [ ] Describe state.
 
 In JS state is an object that all the dynamic date of a component is stored and determines its behavior.
-It can only be used withn a class component.If the state changes, the component respond to the changeby rendering.
+It can only be used within a class component.If the state changes, the component respond to the change by rendering.
 
 - [ ] Describe props.
 
@@ -52,10 +52,10 @@ Props is the way of passing data from one component to another component.
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
 
-Side effects are any actions that are not related to the calvulation of the return value
-but have ana affect such as console.log , APIrequest..
+Side effects are any actions that are not related to the calculation of the return value
+but have ana affect such as console.log , API  request..
 
-In order to sync we use the effect hook useEffect(), that takes 2 arguments. A callback function were we can run the side effect. And a dependancy array(we pass variables to see some changes) as the second argument.
+In order to sync we use the effect hook useEffect(), that takes 2 arguments. A callback function were we can run the side effect. And a dependency array(we pass variables to see some changes) as the second argument.
 
 
 ## Project Set Up
