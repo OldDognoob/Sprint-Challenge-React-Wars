@@ -66,6 +66,11 @@ const StyledCard = styled.div`
     }
 `;
 
+//  const Title=styled.H1`
+   
+ 
+//  `;
+
 export default StyledCard;
 
 

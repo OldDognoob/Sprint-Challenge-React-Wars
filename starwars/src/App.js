@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import CardContainer from './components/CardContainer'
 
+import styled,{keyframes} from 'styled-components'
+
 
 
 
@@ -21,11 +23,30 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <h1 className="Header"><Rotate>&lt; ⚔️ &gt;</Rotate>Welcome to React Wars<Rotate>&lt; ⚔️ &gt;</Rotate></h1>
       <CardContainer />
     </div>
   );
 }
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Rotate = styled.div`
+  display: inline-block;
+  animation: ${rotate} 2s linear infinite;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+`;
+
+
 
 export default App;
 
